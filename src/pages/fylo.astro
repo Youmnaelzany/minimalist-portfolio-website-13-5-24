@@ -1,0 +1,74 @@
+---
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
+import "@/styles/globals.css";
+---
+
+<Layout title="Frontend Mentor | Minimalist Portfolio">
+  <!-- THE HEADER -->
+  <Header />
+  <!-- THE MAIN BODY -->
+  <main
+    class="mx-8 mb-20 text-[#33323D] md:mb-24 md:ml-[2.44rem] md:mr-10 xl:mx-[10.31rem] xl:mb-[9.37rem]"
+  >
+    <section class="">
+      <picture>
+        <source
+          media="(min-width:1440px )"
+          srcset="/public/images/portfolio/desktop/image-portfolio-fylo.jpg"
+        />
+        <source
+          media="(min-width:768px )"
+          srcset="/public/images/portfolio/tablet/image-portfolio-fylo.jpg"
+        />
+        <img
+          src="/public/images/portfolio/mobile/image-portfolio-fylo.jpg"
+          alt=""
+          class=""
+        />
+      </picture>
+    </section>
+    <section class="">
+      <h2 class="">Fylo</h2>
+      <p class="">
+        This project was built in pure HTML and CSS. I had mobile and desktop
+        designs to work to and built it so that it was fully-responsive. I took
+        a mobile-first approach and used modern CSS like Flexbox and Grid for
+        layout purposes.
+      </p>
+      <h3 class="">Interaction Design / Front End Development</h3>
+      <h4 class="">HTML / CSS</h4>
+      <a href="" class="">Visit Website</a>
+    </section>
+
+    <section class="">
+      <h2 class="">Project Background</h2>
+      <p class="">
+        This project was a front-end challenge from Frontend Mentor. It’s a
+        platform that enables you to practice building websites to a design and
+        project brief. Each challenge includes mobile and desktop designs to
+        show how the website should look at different screen sizes. Creating
+        these projects has helped me refine my workflow and solve real-world
+        coding problems. I’ve learned something new with each project, helping
+        me to improve and adapt my style.
+      </p>
+    </section>
+    <section class="">
+      <h2 class="">Static Previews</h2>
+    </section>
+
+    <section class="">
+      <div class="">
+        <h3 class="">Insure</h3>
+        <h4 class="">Previous Project</h4>
+      </div>
+      <div class="">
+        <h3 class="">Manage</h3>
+        <h4 class="">Next Project</h4>
+      </div>
+    </section>
+  </main>
+  <!-- THE FOOTER -->
+  <Footer />
+</Layout>
