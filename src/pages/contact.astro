@@ -1,0 +1,125 @@
+---
+import Header from "@/components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import "@/styles/globals.css";
+---
+
+<Layout title="Frontend Mentor | Minimalist Portfolio">
+  <Header />
+  <main
+    class="mx-8 mb-20 mt-6 md:mb-24 md:ml-[2.44rem] md:mr-10 xl:mx-[10.31rem] xl:mb-[6.81rem]"
+  >
+    <section
+      class="relative flex flex-col gap-6 pb-8 pt-6 before:absolute before:top-0 before:h-[0.0625rem] before:w-[19.4375rem] before:bg-[#33323D]/15 md:pt-8 md:before:w-[43.0625rem] xl:flex-row xl:gap-[7.81rem] xl:pb-12 xl:pt-12 xl:before:w-[69.375rem]"
+    >
+      <div class="w-[19.4375rem] md:w-[17.5625rem] xl:w-[21.875rem]">
+        <h1
+          class="font-IbarraRealNova text-[2.5rem] font-bold leading-[2.625rem] tracking-[-0.02231rem] text-[#33323D]"
+        >
+          Get in Touch
+        </h1>
+      </div>
+      <div class="flex flex-col gap-6">
+        <p
+          class="w-[19.4375rem] font-PublicSans text-[0.9375rem] font-normal leading-[1.875rem] text-[#33323D]/80 md:w-[43.0625rem] xl:w-[39.6875rem] xl:text-base"
+        >
+          I&#39;d love to hear about what you&#39;re working on and how I could
+          help. I&#39;m currently looking for a new role and am open to a wide
+          range of opportunities. My preference would be to find a position in a
+          company in London. But I&#39;m also happy to hear about opportunites
+          that don&#39;t fit that description. I&#39;m a hard-working and
+          positive person who will always approach each task with a sense of
+          purpose and attention to detail. Please do feel free to check out my
+          online profiles below and get in touch using the form.
+        </p>
+        <!-- SOCIAL MEDIA LINKS -->
+        <div class="flex w-[6.5rem] items-center justify-between gap-4">
+          <a href="/" class=""
+            ><img
+              src="/public/images/icons/github.svg"
+              alt="github"
+              class=""
+            /></a
+          >
+          <a href="/" class=""
+            ><img
+              src="/public/images/icons/twitter.svg"
+              alt="twitter"
+              class=""
+            /></a
+          >
+          <a href="/" class=""
+            ><img
+              src="/public/images/icons/linkedin.svg"
+              alt="linkedin"
+              class=""
+            /></a
+          >
+        </div>
+      </div>
+    </section>
+    <section
+      class="relative flex flex-col gap-6 before:absolute before:top-0 before:h-[0.0625rem] before:w-[19.4375rem] before:bg-[#33323D]/15 md:gap-8 md:before:w-[43.0625rem] xl:flex-row xl:gap-[7.81rem] xl:before:w-[69.375rem]"
+    >
+      <div
+        class="w-[19.4375rem] pt-8 md:w-[17.5625rem] xl:w-[21.875rem] xl:pt-12"
+      >
+        <h2
+          class="font-IbarraRealNova text-[2.5rem] font-bold leading-[2.625rem] tracking-[-0.02231rem] text-[#33323D]"
+        >
+          Contact Me
+        </h2>
+      </div>
+      <form action="" class="">
+        <div class="flex flex-col gap-6 xl:mt-[2.94rem]">
+          <div class="flex flex-col gap-2">
+            <label for="userName"></label>
+            <span
+              class="font-PublicSans text-sm font-bold leading-[1.875rem] text-[#33323D]/80"
+              >Name</span
+            >
+            <input
+              type="text"
+              name="userName"
+              id="userName"
+              placeholder="Jane Appleseed"
+              class="h-12 w-[19.4375rem] border-none bg-[#33323D]/10 py-[0.56rem] pl-4 font-PublicSans text-sm font-normal leading-[1.875rem] text-[#33323D]/40 outline-none md:w-[43.0625rem] xl:w-[39.6875rem]"
+            />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="userEmail"></label>
+            <span
+              class="font-PublicSans text-sm font-bold leading-[1.875rem] text-[#33323D]/80"
+              >Email Address</span
+            >
+            <input
+              type="email"
+              name="userEmail"
+              id="userEmail"
+              placeholder="email@example.com"
+              class="h-12 w-[19.4375rem] border-none bg-[#33323D]/10 py-[0.56rem] pl-4 font-PublicSans text-sm font-normal leading-[1.875rem] text-[#33323D]/40 outline-none md:w-[43.0625rem] xl:w-[39.6875rem]"
+            />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="userMessage"></label>
+            <span
+              class="font-PublicSans text-sm font-bold leading-[1.875rem] text-[#33323D]/80"
+              >Message</span
+            >
+            <textarea
+              name="userMessage"
+              id="userMessage"
+              placeholder="How can I help?"
+              class="h-24 w-[19.4375rem] border-none bg-[#33323D]/10 pl-4 pt-[0.56rem] font-PublicSans text-sm font-normal leading-[1.875rem] text-[#33323D]/40 outline-none md:w-[43.0625rem] xl:w-[39.6875rem]"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="flex h-12 w-[12.5rem] items-center justify-center border-none bg-[#203A4C] text-center font-PublicSans text-xs font-normal uppercase leading-[0.125rem] text-white outline-none"
+            >Send Message</button
+          >
+        </div>
+      </form>
+    </section>
+  </main>
+</Layout>

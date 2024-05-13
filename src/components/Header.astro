@@ -1,0 +1,104 @@
+---
+import "@/styles/globals.css";
+---
+
+<header
+  class="relative mb-10 ml-8 mr-[2.19rem] mt-8 md:ml-[2.44rem] md:mr-[2.19rem] md:mt-16 md:gap-[19.19rem] md:max-2xl:mb-[5.88rem] md:max-2xl:flex md:max-2xl:items-center md:max-2xl:justify-between xl:ml-[10.31rem] xl:mr-[10.44rem] xl:gap-[45.37rem]"
+>
+  <div class="flex items-center justify-between gap-[14.18rem]">
+    <!-- LOGO -->
+    <a href="/" class="">
+      <img src="/images/logo.svg" alt="logo" class="" />
+    </a>
+    <!-- HUMBURGER ICON -->
+    <img
+      src="/images/icons/hamburger.svg"
+      alt="openMenu"
+      id="openMenu"
+      class="md:max-2xl:hidden"
+    />
+    <!-- CLOSE ICON -->
+    <img
+      src="/images/icons/close.svg"
+      alt="closeMenu"
+      id="closeMenu"
+      class="hidden"
+    />
+  </div>
+  <!-- MOBILE MENU BAR -->
+  <nav
+    class="absolute right-0 top-14 z-50 hidden h-[11.625rem] w-[13.9375rem] bg-[#33323D] py-10 text-center"
+    id="mobileMenu"
+  >
+    <ul
+      class="flex flex-col items-center justify-center gap-8 *:font-PublicSans *:text-xs *:font-normal *:uppercase *:leading-normal *:tracking-[0.125rem] *:text-white"
+    >
+      <li>
+        <a
+          href="/"
+          class="transition-colors duration-300 ease-in hover:text-[#5FB4A2]"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          href="/portfolio"
+          class="transition-colors duration-300 ease-in hover:text-[#5FB4A2]"
+          >Portfolio</a
+        >
+      </li>
+      <li>
+        <a
+          href="/contact"
+          class="transition-colors duration-300 ease-in hover:text-[#5FB4A2]"
+          >Contact Me</a
+        >
+      </li>
+    </ul>
+  </nav>
+  <!-- TABLET & DESKTOP MENU BAR -->
+  <nav class="hidden md:max-2xl:flex">
+    <ul
+      class="flex items-center justify-center gap-[2.62rem] *:font-PublicSans *:text-xs *:font-normal *:uppercase *:leading-normal *:tracking-[0.125rem] *:text-[#33323D]"
+    >
+      <li>
+        <a
+          href="/"
+          class="transition-colors duration-300 ease-in hover:text-[#5FB4A2]"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          href="/portfolio"
+          class="transition-colors duration-300 ease-in hover:text-[#5FB4A2]"
+          >Portfolio</a
+        >
+      </li>
+      <li>
+        <a
+          href="/contact"
+          class="transition-colors duration-300 ease-in hover:text-[#5FB4A2]"
+          >Contact Me</a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<script is:inline>
+  const openMenu = document.getElementById("openMenu");
+  const closeMenu = document.getElementById("closeMenu");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  openMenu.addEventListener("click", () => {
+    mobileMenu.classList.remove("hidden");
+    closeMenu.classList.remove("hidden");
+    openMenu.classList.add("hidden");
+  });
+  closeMenu.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+    closeMenu.classList.add("hidden");
+    openMenu.classList.remove("hidden");
+  });
+</script>
