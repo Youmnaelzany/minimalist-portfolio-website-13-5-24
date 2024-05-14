@@ -9,7 +9,50 @@ import "@/styles/globals.css";
   <!-- THE HEADER -->
   <Header />
   <!-- THE MAIN BODY -->
-  <main></main>
+  <main class="mx-8 md:ml-[2.44rem] md:mr-10 xl:mx-[10.31rem]">
+    <section class="relative">
+      <picture>
+        <source
+          media="(min-width: 1440px)"
+          srcset="/images/homepage/desktop/image-homepage-hero.jpg"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="/images/homepage/tablet/image-homepage-hero.jpg"
+        />
+        <img
+          src="/images/homepage/mobile/image-homepage-hero.jpg"
+          alt=""
+          class=""
+        />
+      </picture>
+      <div
+        class="mt-6 flex flex-col gap-8 bg-white md:gap-12 md:pt-14 md:max-2xl:absolute md:max-2xl:bottom-0 md:max-2xl:left-0 md:max-2xl:mt-0 xl:gap-[3.31rem]"
+      >
+        <p
+          class="w-[19.4375rem] font-IbarraRealNova text-[2.5rem] font-bold leading-[2.625rem] tracking-[-0.02231rem] text-[#33323D] md:w-[28.625rem] xl:w-[24.375rem] xl:text-[3.125rem] xl:leading-[3.125rem]"
+        >
+          Hey, I&#39;m Alex Spencer and I love building beautiful websites
+        </p>
+        <a
+          href="#about-me"
+          class="flex h-12 w-[12.5rem] items-center bg-[#203A4C] text-center"
+        >
+          <div class="flex size-12 items-center justify-center bg-[#1d3445]">
+            <img
+              src="/public/images/icons/down-arrows.svg"
+              alt="down-arrows"
+              class=""
+            />
+          </div>
+          <span
+            class="w-[9.5rem] font-PublicSans text-xs font-normal uppercase leading-normal tracking-[0.125rem] text-white"
+            >ABOUT ME</span
+          >
+        </a>
+      </div>
+    </section>
+  </main>
   <!-- THE FOOTER -->
   <Footer />
 </Layout>
