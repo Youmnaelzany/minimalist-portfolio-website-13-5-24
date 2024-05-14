@@ -3,6 +3,7 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Layout from "../layouts/Layout.astro";
 import "@/styles/globals.css";
+import DoinProject from "@/components/DoinProject.astro";
 ---
 
 <Layout title="Frontend Mentor | Minimalist Portfolio">
@@ -29,18 +30,18 @@ import "@/styles/globals.css";
       <div
         class="mt-6 flex flex-col gap-8 bg-white md:gap-12 md:pt-14 md:max-2xl:absolute md:max-2xl:bottom-0 md:max-2xl:left-0 md:max-2xl:mt-0 xl:gap-[3.31rem]"
       >
-        <p
+        <h1
           class="w-[19.4375rem] font-IbarraRealNova text-[2.5rem] font-bold leading-[2.625rem] tracking-[-0.02231rem] text-[#33323D] md:w-[28.625rem] xl:w-[24.375rem] xl:text-[3.125rem] xl:leading-[3.125rem]"
         >
           Hey, I&#39;m Alex Spencer and I love building beautiful websites
-        </p>
+        </h1>
         <a
           href="#about-me"
           class="flex h-12 w-[12.5rem] items-center bg-[#203A4C] text-center"
         >
           <div class="flex size-12 items-center justify-center bg-[#1d3445]">
             <img
-              src="/public/images/icons/down-arrows.svg"
+              src="/images/icons/down-arrows.svg"
               alt="down-arrows"
               class=""
             />
@@ -52,6 +53,53 @@ import "@/styles/globals.css";
         </a>
       </div>
     </section>
+    <section
+      class="mt-[4.77rem] flex flex-col gap-20 md:mt-24 md:max-2xl:flex-row md:max-2xl:items-center md:max-2xl:justify-between xl:mt-[7.24rem] xl:gap-32"
+    >
+      <picture>
+        <source
+          media="(min-width: 1440px)"
+          srcset="/images/homepage/desktop/image-homepage-profile.jpg"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="/images/homepage/tablet/image-homepage-profile.jpg"
+        />
+        <img
+          src="/images/homepage/mobile/image-homepage-profile.jpg"
+          alt=""
+          class=""
+        />
+      </picture>
+      <div
+        class="relative mb-[3.19rem] w-[19.4375rem] before:absolute before:top-[-2.55rem] before:h-[0.0625rem] before:w-[19.4375rem] before:bg-[#33323D]/15 after:absolute after:bottom-[-3.19rem] after:h-[0.0625rem] after:w-[19.4375rem] after:bg-[#33323D]/15 md:mb-[2.87rem] md:w-[21.1875rem] md:before:top-[-3.12rem] md:before:w-[21.1875rem] md:after:bottom-[-2.94rem] md:after:w-[21.1875rem] xl:w-[21.875rem] xl:before:top-[-3.13rem] xl:before:w-[21.875rem] xl:after:bottom-[-2.88rem] xl:after:w-[21.875rem]"
+        id="about-me"
+      >
+        <h2
+          class="mb-7 font-IbarraRealNova text-[2.5rem] font-bold leading-[2.625rem] tracking-[-0.02231rem] text-[#33323D]"
+        >
+          About Me
+        </h2>
+        <p
+          class="mb-6 font-PublicSans text-base font-normal leading-[1.875rem] text-[#33323D]/80"
+        >
+          I&#39;m a junior front-end developer looking for a new role in an
+          exciting company. I focus on writing accessible HTML, using modern CSS
+          practices and writing clean JavaScript. When writing JavaScript code,
+          I mostly use React, but I can adapt to whatever tools are required.
+          I&#39;m based in London, UK, but I&#39;m happy working remotely and
+          have experience in remote teams. When I&#39;m not coding, you&#39;ll
+          find me outdoors. I love being out in nature whether that&#39;s going
+          for a walk, run or cycling. I&#39;d love you to check out my work.
+        </p>
+        <a
+          href="/portfolio"
+          class="flex h-12 w-[12.625rem] items-center justify-center border border-solid border-[#33323D] text-xs font-normal uppercase leading-normal tracking-[0.125rem] text-[#33323D]"
+          >GO TO PORTFOLIO</a
+        >
+      </div>
+    </section>
+    <DoinProject />
   </main>
   <!-- THE FOOTER -->
   <Footer />

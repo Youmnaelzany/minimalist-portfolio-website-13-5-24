@@ -73,6 +73,7 @@ import "@/styles/globals.css";
               id="userName"
               placeholder="Jane Appleseed"
               class="h-12 w-[19.4375rem] border-none bg-[#33323D]/10 py-[0.56rem] pl-4 font-PublicSans text-sm font-normal leading-[1.875rem] text-[#33323D]/40 outline-none md:w-[43.0625rem] xl:w-[39.6875rem]"
+              required
             />
           </div>
           <div class="flex flex-col gap-2">
@@ -87,6 +88,7 @@ import "@/styles/globals.css";
               id="userEmail"
               placeholder="email@example.com"
               class="h-12 w-[19.4375rem] border-none bg-[#33323D]/10 py-[0.56rem] pl-4 font-PublicSans text-sm font-normal leading-[1.875rem] text-[#33323D]/40 outline-none md:w-[43.0625rem] xl:w-[39.6875rem]"
+              required
             />
           </div>
           <div class="flex flex-col gap-2">
@@ -100,16 +102,55 @@ import "@/styles/globals.css";
               id="userMessage"
               placeholder="How can I help?"
               class="h-24 w-[19.4375rem] border-none bg-[#33323D]/10 pl-4 pt-[0.56rem] font-PublicSans text-sm font-normal leading-[1.875rem] text-[#33323D]/40 outline-none md:w-[43.0625rem] xl:w-[39.6875rem]"
-            ></textarea>
+              required></textarea>
           </div>
           <button
             type="submit"
             class="flex h-12 w-[12.5rem] items-center justify-center border-none bg-[#203A4C] text-center font-PublicSans text-xs font-normal uppercase leading-[0.125rem] text-white outline-none"
             >Send Message</button
           >
+          <h3
+            class="hidden font-PublicSans text-sm font-bold leading-[1.125rem] text-[#5FB4A2]"
+            id="thanksMsg"
+          >
+            Thank you for your message. I'll get back to you as soon as
+            possible.
+          </h3>
+          <h3
+            class="hidden font-PublicSans text-sm font-bold leading-[1.125rem] text-[#F43030]"
+            id="erroMsg"
+          >
+            Please use a valid email address.
+          </h3>
         </div>
       </form>
     </section>
   </main>
   <Footer />
 </Layout>
+
+<script is:inline>
+  const userEmail = document.getElementById("userEmail");
+  const thanksMsg = document.getElementById("thanksMsg");
+  const erroMsg = document.getElementById("erroMsg");
+  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  const wrongEmail =
+    /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}(\.[a-zA-Z]{2,4})?$/;
+
+  const form = document.querySelector("form");
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (emailRegex.test(userEmail.value)) {
+      thanksMsg.classList.remove("hidden");
+    } else {
+      erroMsg.classList.add("hidden");
+    }
+  });
+
+  userEmail.addEventListener("input", () => {
+    if (wrongEmail.test(userEmail.value)) {
+      erroMsg.classList.remove("hidden");
+      thanksMsg.classList.add("hidden");
+    }
+  });
+</script>
